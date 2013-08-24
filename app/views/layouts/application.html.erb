@@ -22,7 +22,10 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    <%= render 'layouts/footer' %>
+    </div>
 
     
     <%= javascript_include_tag "application" %>
