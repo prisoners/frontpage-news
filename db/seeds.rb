@@ -182,6 +182,30 @@
 			Bhawani and her family of seven live in an eight feet by eight feet room. She said no government scheme would be enough for her family due to its sheer size. However, she wondered why the government never addresses long pending demands of the colony residents and instead keeps coming up with schemes for them.',
    		author: 'Staff Editor',
    		date: 'Aug 24, 2013'
+   	},
+   	{
+   		title:'',
+   		content:{
+   		title:'It’s still up to the ration shops, say Delhi food scheme recipients',
+   		content: '
+   			Washington: Indians have emerged as the third-largest immigrant group in the US behind Mexicans and the Chinese with their number touching nearly 1.9 million in 2011, according to a US think tank.
+
+   			The share of Indian immigrants among all foreign born in the US has grown to almost 5 percent of the country’s 40.4 million immigrants in 2011, noted an article published in the Migration Policy Institute’s online journal, the Migration Information Source.
+
+   			Indian population has grown to over 150 times its size since 1960, when the slightly more than 12,000 Indian immigrants represented less than 0.5 percent of the total immigrant population of 9.7 million immigrants.
+
+   			Indians’ share of Asian immigrants in the United States has been increasing steadily since 1960, making it the third-largest sending country overall and the second-largest Asian sending country after China.
+
+   			As a group, immigrants from India are better educated, more likely to have strong English language skills and arrive on employment-based visas, and are less likely to live below the federal poverty line than the overall foreign-born population, it says.
+
+   			They are also more concentrated in the working ages than immigrants overall, and Indian-born men outnumber Indian-born women. In 2011, India was the second most common country of origin for international students at US institutions of higher learning, behind China, MPI noted.
+
+   			Based on data from various US government reports, the article noted that Almost one-third of all Indian immigrants resided in just two states:
+
+   			California (380,700 or 21 percent) and New Jersey (210,400, or 11 percent).',
+   		author: 'Staff Editor',
+   		date: 'Aug 24, 2013'
+   	}'
    	}
    ])
    #cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])

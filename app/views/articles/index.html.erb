@@ -1,0 +1,23 @@
+<div class="row-fluid">
+  <div class="span10">
+  <% def spans(n)
+       dict=[12,6,5,4,4]
+       if n<4
+        return dict[n]
+       else 
+        return 3
+       end
+      end 
+  %>
+  
+  <% @articles.each_with_index do |article,i| %>
+    <div class='<%="span#{spans(i)}"%>'>
+      <h1 style='<%= "font-size:#{if i==0 then "3" else "2" end}em;"%>'><%= link_to @articles[i].title , article %></h1>
+      <% n = spans(i) * 10 %>
+      <p><%= RedCloth.new(@articles[0].content.split[0..n].join(' ')).to_html.html_safe%></p>
+      <p><%= link_to "Learn more",article %> </a></p>
+    </div>
+  <% end %>
+</div>
+</div>
+          
