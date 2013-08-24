@@ -22,7 +22,11 @@
 
   <body>
     <%= render 'layouts/navbar' %>
+    <hr />
     <div class="container" style="margin-top:30px;">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
       <%= yield %>
     <%= render 'layouts/footer' %>
     </div>
