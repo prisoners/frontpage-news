@@ -16,7 +16,10 @@
   	<title><%= content_for?(:title) ? yield(:title) : "FrontPage - The Everted Newssite" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
+    
+  	<script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet-src.js"></script>
+
     <%= csrf_meta_tags %>
   </head>
 

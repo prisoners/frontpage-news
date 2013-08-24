@@ -14,3 +14,4 @@ $ ->
     $("#Long").html lng
   Geo = {}
   navigator.geolocation.getCurrentPosition success, error  if navigator.geolocation
+
