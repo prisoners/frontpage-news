@@ -951,7 +951,7 @@ Visitor.create([
          weight: 1.0
       }
    ])
-Article.create([
+Visitor.create([
       { 
          article_id:4,
          latitude:10.491943359375,
@@ -1039,11 +1039,11 @@ Article.create([
       { 
          article_id:4,
          latitude:28.608398437500,
-         longitude:77.2668457031 25,
+         longitude:77.266845703125,
          weight: 1.0
       }
    ])
-Article.create([
+Visitor.create([
       {
          article_id: 5,
          latitude:27.235107421875,
@@ -1135,7 +1135,7 @@ Article.create([
          weight: 1.0
       } 
    ])
-Article.create([
+Visitor.create([
       {
          article_id: 6,
          latitude:27.894287109375,
@@ -1227,7 +1227,7 @@ Article.create([
          weight: 1.0
       }
    ])
-Article.create([
+Visitor.create([
       {
          article_id: 7,
          latitude:27.894287109375,
@@ -1319,7 +1319,7 @@ Article.create([
          weight: 1.0
       }
    ])
-Article.create([
+Visitor.create([
       {
          article_id: 8,
          latitude:28.597412109375,
@@ -1411,7 +1411,7 @@ Article.create([
          weight: 1.0
       }
    ])
-Article.create([
+Visitor.create([
       {
          article_id: 9,
          latitude:22.379150390625,
@@ -1503,7 +1503,7 @@ Article.create([
          weight: 1.0
       }
    ])
-Article.create([
+Visitor.create([
       {
          article_id: 10,
          latitude:28.624877929687,

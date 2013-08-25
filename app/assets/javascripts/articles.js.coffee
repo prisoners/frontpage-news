@@ -10,6 +10,8 @@ $ ->
   error = ->
     console.log "Geocoder failed"
   populateHeader = (lat, lng) ->
+    lati = lat
+    longi = lng
     $("#Lat").html lat
     $("#Long").html lng
   Geo = {}

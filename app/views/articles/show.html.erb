@@ -21,7 +21,7 @@
                     }
                 });
 
-                heatmapLayer.addData(testData.data);
+                heatmapLayer.addData(<%= "testData#{@article.id}.data"%>);
 
                 var overlayMaps = {
                     'Heatmap': heatmapLayer
@@ -30,8 +30,8 @@
                 var controls = L.control.layers(null, overlayMaps, {collapsed: false});
 
                   var map = new L.Map('heatmapArea', {
-                    center: new L.LatLng(51.505, -0.09),
-                    zoom: 6,
+                    center: new L.LatLng(28.05,77.2),
+                    zoom: 4,
                     layers: [baseLayer, heatmapLayer]
                 });
 
@@ -42,6 +42,7 @@
         </script>
 <div class="row-fluid">
   <div class="span9">
+    <div class="row-fluid">
     <h1> <%= @article.title %></h1>
     <p><small class="pull-left">
     	<%= @article.author %>
@@ -50,16 +51,28 @@
        	<%= @article.date %>
        </small>
     </p>
-    <p><hr/></p>
+    </div>
+    <div class="row-fluid">
+    <div id="heatmapArea" class="well pull-left" style="width:610px;padding:0;height:400px;cursor:pointer;position:relative;margin:20px;"></div>
       <p><%= @article.content.gsub(/^(.*)$/, '<p>\1</p>').html_safe%></p>
-    <div id="heatmapArea" class="well" style="width:610px;padding:0;height:400px;cursor:pointer;position:relative;"></div>
+    </div>
+  </div>
   <div class="span3">
-  	<div id="Lat"></div>
-  	<div id="Long"></div>
+    <!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch influence map</a>-->
+    <div id="Lat"></div>
+    <div id="Long"></div>
   </div>
 
+
+    
+
+    
+
+
 </div>
+
 <% s="" %>
+<% m=@article.visitors.size %>
 <% @article.visitors.each_with_index do |visitor,i| %>
   <% if i != 0 %>
     <% s <<",{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
@@ -68,8 +81,32 @@
   <% end %>
 <% end %>
 <script type="text/javascript" charset="utf-8">
-            var testData={
-            max: 46,
+            var <%= "testData#{@article.id}"%>={
+            max: <%= m %>,
             data: [<%= s %>]
         };
-    </script>
+(function() {
+  $(function() {
+    var Geo, error, populateHeader, success;
+    success = function(position) {
+      Geo.lat = position.coords.latitude;
+      Geo.lng = position.coords.longitude;
+      return populateHeader(Geo.lat, Geo.lng);
+    };
+    error = function() {
+      return console.log("Geocoder failed");
+    };
+    populateHeader = function(lat, lng) {
+      setTimeout(function() {
+       $.ajax({ url: '<%= "/articles/#{@article.id}/record_visit?"%>' +"lat="+lat +"&long="+ lng});},25000);
+    };
+    Geo = {};
+    if (navigator.geolocation) {
+      return navigator.geolocation.getCurrentPosition(success, error);
+    }
+  });
+
+}).call(this);
+
+
+</script>

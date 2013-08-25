@@ -5,5 +5,5 @@ class Tag < ActiveRecord::Base
 	validates :type, inclusion: { in: %w(person location organization) }
 
 	has_many :articletags
-  	has_many :articles, through :articletags
+  	has_many :articles, through: :articletags
 end
