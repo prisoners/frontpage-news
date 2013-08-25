@@ -48,6 +48,7 @@ namespace :db do
         @current=Articletag.where(article_id: @article.id).where(tag_id: @tag.id).first
         if @current
           @current.weight=@current.weight+1
+          @current.save
         else
           @articletag=Articletag.new
           @articletag.tag_id=@tag.id

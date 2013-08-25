@@ -1,3 +1,18 @@
+<% s="" %>
+<% m=@article.visitors.size %>
+<% @article.visitors.each_with_index do |visitor,i| %>
+  <% if i != 0 %>
+    <% s <<",{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
+  <% else %>
+    <% s << "{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
+  <% end %>
+<% end %>
+<script type="text/javascript" charset="utf-8">
+            var <%= "testData#{@article.id}"%>={
+            max: <%= m %>,
+            data: [<%= s %>]
+        };
+</script>
 <script type="text/javascript" charset="utf-8">
             $(function() {
                 window.prettyPrint && prettyPrint();
@@ -61,6 +76,15 @@
     <!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch influence map</a>-->
     <div id="Lat"></div>
     <div id="Long"></div>
+    <div>
+      <h1>People here </h1>
+      <ul>
+      <% @article.articletags.each do |tag| %>
+        <% person=Tag.find(tag.tag_id) %>
+        <% if person.typetext="person" %>
+         <li><%= person.tagtext %>&nbsp;&nbsp;&nbsp;Mentioned <%= tag.weight %> times</li>
+        <% end %>
+      <% end %>
   </div>
 
 
@@ -71,20 +95,7 @@
 
 </div>
 
-<% s="" %>
-<% m=@article.visitors.size %>
-<% @article.visitors.each_with_index do |visitor,i| %>
-  <% if i != 0 %>
-    <% s <<",{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
-  <% else %>
-    <% s << "{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
-  <% end %>
-<% end %>
-<script type="text/javascript" charset="utf-8">
-            var <%= "testData#{@article.id}"%>={
-            max: <%= m %>,
-            data: [<%= s %>]
-        };
+<script type="text/javascript">
 (function() {
   $(function() {
     var Geo, error, populateHeader, success;
