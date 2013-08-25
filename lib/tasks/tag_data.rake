@@ -64,6 +64,7 @@ namespace :db do
     at.each_with_index do |array,i|
       @article=Article.find(i+1)
       array.each do |location|
+        location=location.downcase
         puts "%#{location}%"
         @tag=Tag.where("tagtext like ?","%#{location}%").first
 
