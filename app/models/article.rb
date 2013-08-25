@@ -1,6 +1,7 @@
 class Article < ActiveRecord::Base
   has_many :visitors
-
+  has_many :articletags
+  has_many :tags, through :articletags
   def score(lat,long)
     sc=0
     self.visitors.each do |visitor|
