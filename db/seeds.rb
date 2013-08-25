@@ -587,4 +587,1013 @@
          weight:1.0
       }
    ])
+  Visitor.create ([
+      { 
+         article_id:2,
+         latitude:26.531982421875,
+         longitude: 82.353515625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.092529296875,
+         longitude: 82.3974609375,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.927490234375,
+         longitude: 82.1337890625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.663818359375,
+         longitude: 82.02392578125,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.422119140625,
+         longitude: 82.4853515625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.619873046875,
+         longitude: 82.7490234375,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.949462890625,
+         longitude: 82.4853515625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.641845703125,
+         longitude: 82.08984375,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.378173828125,
+         longitude: 82.1337890625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.334228515625,
+         longitude: 82.79296875,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.795654296875,
+         longitude: 83.0126953125,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.773681640625,
+         longitude: 82.2216796875,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.729736328125,
+         longitude: 81.9140625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:27.015380859375,
+         longitude: 82.02392578125,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.883544921875,
+         longitude: 82.63916015625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.619873046875,
+         longitude: 80.68359375,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.817626953125,
+         longitude: 80.70556640625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:25.938720703125,
+         longitude: 79.892578125,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:25.389404296875,
+         longitude: 80.68359375,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:25.718994140625,
+         longitude: 85.3857421875,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.400146484375,
+         longitude: 85.166015625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.510009765625,
+         longitude: 84.39697265625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.751708984375,
+         longitude: 83.1005859375,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:27.432861328125,
+         longitude: 81.5625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:27.388916015625,
+         longitude: 80.8154296875,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.092529296875,
+         longitude: 81.03515625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.312255859375,
+         longitude: 81.89208984375,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.993408203125,
+         longitude: 81.9140625,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:26.136474609375,
+         longitude: 84.111328125,
+         weight: 1.0
+      },
+      { 
+         article_id:2,
+         latitude:25.543212890625,
+         longitude: 83.86962890625,
+         weight: 1.0
+      }
+   ])
+Visitor.create([
+      { 
+         article_id:3,
+         latitude:13.035278320312,
+         longitude:77.54150390625,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.963867187500,
+         longitude:77.566223144532,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.925415039062,
+         longitude:77.590942382813,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.961120605468,
+         longitude:77.623901367188,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.018798828125,
+         longitude:77.574462890625,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.958374023437,
+         longitude:77.623901367188,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.988586425781,
+         longitude:77.678833007813,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.018798828125,
+         longitude:77.684326171875,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.985839843750,
+         longitude:77.607421875,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.010559082031,
+         longitude:77.552490234375,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.024291992187,
+         longitude:77.5634765625,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.944641113281,
+         longitude:77.615661621094,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.980346679687,
+         longitude:77.637634277344,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.966613769531,
+         longitude:77.681579589844,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.090209960937,
+         longitude:80.26336669922 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.018798828125,
+         longitude:80.230407714845 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.057250976562,
+         longitude:80.21942138672 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.101196289062,
+         longitude:80.230407714845 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.073730468750,
+         longitude:80.28533935547 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.985839843750,
+         longitude:80.224914550783 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:12.969360351562,
+         longitude:80.158996582033 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.029785156250,
+         longitude:80.224914550783 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.073730468750,
+         longitude:80.252380371095 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.128662109375,
+         longitude:80.246887207033 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.134155273437,
+         longitude:80.246887207033 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.156127929687,
+         longitude:80.312805175783 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.079223632812,
+         longitude:80.246887207033 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:13.029785156250,
+         longitude:80.213928222658 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:18.248291015625,
+         longitude:77.659606933595 ,
+         weight: 1.0
+      },
+      { 
+         article_id:3,
+         latitude:17.363891601563,
+         longitude:78.472595214845,
+         weight: 1.0
+      }
+   ])
+Article.create([
+      { 
+         article_id:4,
+         latitude:10.491943359375,
+         longitude:76.234130859375,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:10.491943359375,
+         longitude:76.190185546875,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:10.546875000000,
+         longitude:76.267089843750,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:9.9755859374997,
+         longitude:76.300048828125,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:9.9865722656247,
+         longitude:76.333007812500,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:12.941894531250,
+         longitude:77.618408203125,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:12.941894531250,
+         longitude:77.618408203125,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:12.941894531250,
+         longitude:77.552490234375,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:18.984375000000,
+         longitude:72.806396484375,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:19.138183593750,
+         longitude:72.960205078125,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:19.028320312500,
+         longitude:72.850341796875,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:17.402343750000,
+         longitude:78.497314453125,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:17.402343750000,
+         longitude:78.475341796875,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:28.586425781250,
+         longitude:77.178955078125,
+         weight: 1.0
+      },
+      { 
+         article_id:4,
+         latitude:28.608398437500,
+         longitude:77.2668457031 25,
+         weight: 1.0
+      }
+   ])
+Article.create([
+      {
+         article_id: 5,
+         latitude:27.235107421875,
+         longitude:79.8486328125,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:28.729248046875,
+         longitude:79.6728515625,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:29.696044921875,
+         longitude:79.0576171875,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:26.180419921875,
+         longitude:80.1123046875,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:25.828857421875,
+         longitude:82.2216796875,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:26.883544921875,
+         longitude:83.2763671875,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:27.147216796875,
+         longitude:82.2216796875,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:26.619873046875,
+         longitude:81.2548828125,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:28.114013671875,
+         longitude:78.1787109375,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:29.432373046875,
+         longitude:77.7392578125,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:29.959716796875,
+         longitude:77.9150390625,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:26.004638671875,
+         longitude:81.2548828125,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:25.389404296875,
+         longitude:82.4853515625,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:27.147216796875,
+         longitude:78.4423828125,
+         weight: 1.0
+      }, 
+      {
+         article_id: 5,
+         latitude:27.674560546875,
+         longitude:80.2001953125,
+         weight: 1.0
+      } 
+   ])
+Article.create([
+      {
+         article_id: 6,
+         latitude:27.894287109375,
+         longitude:77.1240234375, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:28.509521484375,
+         longitude:77.2998046875, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:19.456787109375,
+         longitude:72.7734375000, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:19.237060546875,
+         longitude:72.9492187500, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:19.149169921875,
+         longitude:72.8173828125, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:17.786865234375,
+         longitude:78.3984375000, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:14.183349609375,
+         longitude:77.2558593750, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:13.018798828125,
+         longitude:80.2221679687, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:21.126708984375,
+         longitude:79.1015625000, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:21.192626953125,
+         longitude:79.0576171875, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:23.016357421875,
+         longitude:72.5537109375, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:22.928466796875,
+         longitude:72.6416015625, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:26.773681640625,
+         longitude:80.9252929687, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:26.905517578125,
+         longitude:80.9472656250, 
+         weight: 1.0
+      },
+      {
+         article_id: 6,
+         latitude:22.598876953125,
+         longitude:88.3081054687,
+         weight: 1.0
+      }
+   ])
+Article.create([
+      {
+         article_id: 7,
+         latitude:27.894287109375,
+         longitude:73.8720703125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:23.323974609375,
+         longitude:72.6416015625,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:17.698974609375,
+         longitude:75.9814453125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:13.128662109375,
+         longitude:77.9150390625,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:18.402099609375,
+         longitude:79.6728515625,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:21.214599609375,
+         longitude:84.0673828125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:24.027099609375,
+         longitude:86.3525390625,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:26.488037109375,
+         longitude:79.8486328125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:22.796630859375,
+         longitude:76.6845703125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:28.597412109375,
+         longitude:78.4423828125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:31.234130859375,
+         longitude:76.3330078125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:22.972412109375,
+         longitude:71.0595703125,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:13.656005859375,
+         longitude:77.2119140625,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:10.491943359375,
+         longitude:78.2666015625,
+         weight: 1.0
+      },
+      {
+         article_id: 7,
+         latitude:19.456787109375,
+         longitude:82.1337890625,
+         weight: 1.0
+      }
+   ])
+Article.create([
+      {
+         article_id: 8,
+         latitude:28.597412109375,
+         longitude:77.2119140625,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:26.224365234375,
+         longitude:74.8388671875,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:19.193115234375,
+         longitude:72.7294921875,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:22.708740234375,
+         longitude:71.9384765625,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:22.181396484375,
+         longitude:80.3759765625,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:20.159912109375,
+         longitude:79.4970703125,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:21.302490234375,
+         longitude:79.2333984375,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:16.907958984375,
+         longitude:79.1455078125,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:21.829833984375,
+         longitude:88.2861328125,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:22.445068359375,
+         longitude:87.7587890625,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:25.960693359375,
+         longitude:82.6611328125,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:11.898193359375,
+         longitude:79.3212890625,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:12.689208984375,
+         longitude:80.0244140625,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:10.140380859375,
+         longitude:76.2451171875,
+         weight: 1.0
+      },
+      {
+         article_id: 8,
+         latitude:22.532958984375,
+         longitude:79.8486328125,
+         weight: 1.0
+      }
+   ])
+Article.create([
+      {
+         article_id: 9,
+         latitude:22.379150390625,
+         longitude:73.16894531250, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:22.247314453125,
+         longitude:73.23486328125, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:23.016357421875,
+         longitude:72.55371093750, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:23.082275390625,
+         longitude:72.57568359375, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:22.280273437500,
+         longitude:70.71899414062, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:22.313232421875,
+         longitude:70.88378906250, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:21.247558593750,
+         longitude:72.80639648437, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:21.049804687500,
+         longitude:72.71850585937, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:21.192626953125,
+         longitude:72.86132812500, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:21.280517578125,
+         longitude:72.79541015625, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:22.324218750000,
+         longitude:73.21289062500, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:22.280273437500,
+         longitude:70.78491210937, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:22.302246093750,
+         longitude:70.83984375000, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:23.016357421875,
+         longitude:72.60864257812, 
+         weight: 1.0
+      },
+      {
+         article_id: 9,
+         latitude:22.247314453125,
+         longitude:73.21289062500, 
+         weight: 1.0
+      }
+   ])
+Article.create([
+      {
+         article_id: 10,
+         latitude:28.624877929687,
+         longitude:77.099304199219,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.567199707031,
+         longitude:77.178955078125,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.539733886719,
+         longitude:77.258605957031,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.657836914062,
+         longitude:77.189941406250,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.710021972656,
+         longitude:77.222900390625,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.693542480469,
+         longitude:77.173461914062,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.685302734375,
+         longitude:77.113037109375,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.674316406250,
+         longitude:77.286071777344,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.690795898437,
+         longitude:77.313537597656,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.649597167969,
+         longitude:77.426147460937,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.358459472656,
+         longitude:77.310791015625,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.394165039062,
+         longitude:77.291564941406,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.405151367187,
+         longitude:77.305297851562,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.446350097656,
+         longitude:77.000427246094,
+         weight: 1.0
+      },
+      {
+         article_id: 10,
+         latitude:28.468322753906,
+         longitude:77.022399902344,
+         weight: 1.0
+      }
+   ])
+
 
