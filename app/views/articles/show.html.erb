@@ -34,8 +34,16 @@
       <ul>
       <% @article.articletags.each do |tag| %>
         <% person=Tag.find(tag.tag_id) %>
-        <% if person.typetext="person" %>
+        <% if person.typetext=="person" %>
          <li><%= person.tagtext %>&nbsp;&nbsp;&nbsp;Mentioned <%= tag.weight %> times</li>
+        <% end %>
+      <% end %>
+      <h1>News started at </h1>
+      <ul>
+      <% @article.articletags.each do |tag| %>
+        <% place=Tag.find(tag.tag_id) %>
+        <% if place.typetext=="location" %>
+         <li><%= place.tagtext %>&nbsp;&nbsp;&nbsp;Mentioned <%= tag.weight %> times</li>
         <% end %>
       <% end %>
   </div>

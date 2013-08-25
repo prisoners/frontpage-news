@@ -59,5 +59,28 @@ namespace :db do
       end
     end
   end
+  task add_locationtags: :environment do
+    at=[["India", "Mumbai", "Delhi","India","Cleveland","Ohio","Mumbai","Mumbai","India","India","India"],["Ayodhya","Ayodhya","Ayodhya","Uttar Pradesh","Faizabad","Ayodhya"],["India","Silicon Valley"],["Germany","London","England","Fulham","Sunderland","England","England"],["Uttar Pradesh","Lucknow","Etawah"],["England","Australia","Oval","Australia","England", "Australia", "England","Australia"],["India","India"],["Gujarat","Thailand","Phuket","Thailand","Bangkok","Thailand","Gujarat","Bhuj", "Gujarat","Ahmedabad","Thailand"],["Delhi","Delhi"],["Delhi"]]
+    at.each_with_index do |array,i|
+      @article=Article.find(i+1)
+      array.each do |location|
+        puts "%#{location}%"
+        @tag=Tag.where("tagtext like ?","%#{location}%").first
+
+        @current=Articletag.where(article_id: @article.id).where(tag_id: @tag.id).first
+        if @current
+          @current.weight=@current.weight+1
+          @current.save
+        else
+          @articletag=Articletag.new
+          @articletag.tag_id=@tag.id
+          @articletag.article_id=@article.id
+          @articletag.weight=1
+          @articletag.save
+        end
+      end
+    end
+  end
+
 
 end
