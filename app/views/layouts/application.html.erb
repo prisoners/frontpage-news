@@ -17,10 +17,13 @@
 
   	<%= stylesheet_link_tag    "application" %>
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
-    
-  	<script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet-src.js"></script>
 
+  	<script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet-src.js"></script>
+    <script type="text/javascript" src="http://www.patrick-wied.at/static/heatmapjs/src/heatmap.js"></script>
+    <script type="text/javascript" src="http://www.patrick-wied.at/static/heatmapjs/src/heatmap-leaflet.js"></script>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    
   </head>
 
   <body>
@@ -39,6 +42,6 @@
     <%= debug(params) if Rails.env.development? %>
 
     
-    <%= javascript_include_tag "application" %>
+    
   </body>
 </html>
