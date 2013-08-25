@@ -1,0 +1,16 @@
+<div class="row-fluid">
+  <div class="span10">
+  <% @people.each do |person| %>
+  <h1><%= person.tagtext %><small class="pull-right"><%= person.score(@lat,@lang) %></small></h1>
+  <% end %>
+</div>
+<div class="span2">
+<ul>
+  <li><a href="?lat=28.5&long=77.2">Delhi Edition</a></li>
+  <li><a href="?lat=13.5&long=80.2">Chennai Edition</a></li>
+  <li><a href="?lat=18.9&long=72.8">Mumbai Edition</a></li>
+  <li><a href="?lat=26.75&long=80.5">Kanpur Edition</a></li>
+</ul>
+</div>
+</div>
+         

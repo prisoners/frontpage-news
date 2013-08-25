@@ -7,4 +7,13 @@ class Tag < ActiveRecord::Base
 
 	has_many :articletags
   	has_many :articles, through: :articletags
+
+  	def score(lat,long)
+  		sc=0;
+  		self.articletags.each do |articletag|
+  			article=Article.find(articletag.article_id);
+  			sc+=article.score(lat,long)*articletag.weight;
+  		end
+  		return sc;
+  	end
 end

@@ -2,59 +2,12 @@
 <% m=@article.visitors.size %>
 <% @article.visitors.each_with_index do |visitor,i| %>
   <% if i != 0 %>
-    <% s <<",{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
+    <% s <<",{lat: #{visitor.latitude.round(4)}, lng: #{visitor.longitude.round(4)}, count: #{visitor.weight.to_i}}" %>
   <% else %>
-    <% s << "{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
+    <% s << "{lat: #{visitor.latitude.round(4)}, lng: #{visitor.longitude.round(4)}, count: #{visitor.weight.to_i}}" %>
   <% end %>
 <% end %>
-<script type="text/javascript" charset="utf-8">
-            var <%= "testData#{@article.id}"%>={
-            max: <%= m %>,
-            data: [<%= s %>]
-        };
-</script>
-<script type="text/javascript" charset="utf-8">
-            $(function() {
-                window.prettyPrint && prettyPrint();
 
-                var baseLayer = L.tileLayer(
-                    'http://{s}.tile.cloudmade.com/ad132e106cd246ec961bbdfbe0228fe8/997/256/{z}/{x}/{y}.png',{
-                        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-                        maxZoom: 18
-                    }
-                );
-
-                var heatmapLayer = L.TileLayer.heatMap({
-                    radius: 20,
-                    opacity: 0.8,
-                    gradient: {
-                        0.45: "rgb(0,0,255)",
-                        0.55: "rgb(0,255,255)",
-                        0.65: "rgb(0,255,0)",
-                        0.95: "yellow",
-                        1.0: "rgb(255,0,0)"
-                    }
-                });
-
-                heatmapLayer.addData(<%= "testData#{@article.id}.data"%>);
-
-                var overlayMaps = {
-                    'Heatmap': heatmapLayer
-                };
-
-                var controls = L.control.layers(null, overlayMaps, {collapsed: false});
-
-                  var map = new L.Map('heatmapArea', {
-                    center: new L.LatLng(28.05,77.2),
-                    zoom: 4,
-                    layers: [baseLayer, heatmapLayer]
-                });
-
-                controls.addTo(map);
-                // make accessible for debugging
-                layer = heatmapLayer;
-            });
-        </script>
 <div class="row-fluid">
   <div class="span9">
     <div class="row-fluid">
@@ -94,7 +47,62 @@
 
 
 </div>
+<script type="text/javascript" src="http://www.patrick-wied.at/static/heatmapjs/src/heatmap.js"></script>
+<script type="text/javascript" src="http://www.patrick-wied.at/static/heatmapjs/src/heatmap-gmaps.js"></script>
+<script type="text/javascript">
+function createTimer(x,heatmap,i) {
+    setTimeout(function() {
+        heatmap.addDataPoint(x.lat,x.lng,x.count);
+    }, 1000*i);
+}
 
+window.onload = function(){
+    // standard gmaps initialization
+    var myLatlng = new google.maps.LatLng(28.3333, 76.35);
+    // define map properties
+    var myOptions = {
+      zoom: 3,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      disableDefaultUI: false,
+      scrollwheel: true,
+      draggable: true,
+      navigationControl: true,
+      mapTypeControl: false,
+      scaleControl: true,
+      disableDoubleClickZoom: false
+    };
+    // we'll use the heatmapArea 
+    var map = new google.maps.Map($("#heatmapArea")[0], myOptions);
+    
+    // let's create a heatmap-overlay
+    // with heatmap config properties
+    var heatmap = new HeatmapOverlay(map, {
+        "radius":20,
+        "visible":true, 
+        "opacity":60
+    });
+ 
+    // here is our dataset
+    // important: a datapoint now contains lat, lng and count property!
+    var testData={
+            max: 1,
+            data: []
+    };
+ 
+    // now we can set the data
+    google.maps.event.addListenerOnce(map, "idle", function(){
+        // this is important, because if you set the data set too early, the latlng/pixel projection doesn't work
+          heatmap.setDataSet(testData);
+          x=[<%= s %>];
+          for (var i=0;i< <%= m %>;i++) {
+            console.log (x[i].lat,x[i].lng,x[i].count)
+            createTimer(x[i],heatmap,i);
+          }
+    });
+ 
+};
+</script>
 <script type="text/javascript">
 (function() {
   $(function() {

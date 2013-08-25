@@ -1,0 +1,136 @@
+<% s="" %>
+<% m=@article.visitors.size %>
+<% @article.visitors.each_with_index do |visitor,i| %>
+  <% if i != 0 %>
+    <% s <<",{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
+  <% else %>
+    <% s << "{lat: #{visitor.latitude.round(4)}, lon: #{visitor.longitude.round(4)}, value: #{visitor.weight.to_i}}" %>
+  <% end %>
+<% end %>
+<script type="text/javascript" charset="utf-8">
+            var <%= "testData#{@article.id}"%>={
+            max: <%= m %>,
+            data: [<%= s %>]
+        };
+</script>
+<script type="text/javascript" charset="utf-8">
+            $(function() {
+                window.prettyPrint && prettyPrint();
+
+                var baseLayer = L.tileLayer(
+                    'http://{s}.tile.cloudmade.com/ad132e106cd246ec961bbdfbe0228fe8/997/256/{z}/{x}/{y}.png',{
+                        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+                        maxZoom: 18
+                    }
+                );
+
+                var heatmapLayer = L.TileLayer.heatMap({
+                    radius: 20,
+                    opacity: 0.8,
+                    gradient: {
+                        0.45: "rgb(0,0,255)",
+                        0.55: "rgb(0,255,255)",
+                        0.65: "rgb(0,255,0)",
+                        0.95: "yellow",
+                        1.0: "rgb(255,0,0)"
+                    }
+                });
+
+                //heatmapLayer.addData(<%= "testData#{@article.id}.data"%>);
+
+                var overlayMaps = {
+                    'Heatmap': heatmapLayer
+                };
+
+                var controls = L.control.layers(null, overlayMaps, {collapsed: false});
+
+                  var map = new L.Map('heatmapArea', {
+                    center: new L.LatLng(28.05,77.2),
+                    zoom: 4,
+                    layers: [baseLayer, heatmapLayer]
+                });
+
+                controls.addTo(map);
+                // make accessible for debugging
+                layer = heatmapLayer;
+
+                function createTimer(datapoint) {
+                  setTimeout(function() {
+                    heatmapLayer.store.addDataPoint(datapoint.lat,datapoint.lon,datapoint.value);
+                    }, 1000 );
+                }
+                for (var datapoint in <%= "testData#{@article.id}.data"%>) 
+                  {
+                        createTimer(datapoint);
+                  }
+
+
+
+            });
+        </script>
+<div class="row-fluid">
+  <div class="span9">
+    <div class="row-fluid">
+    <h1> <%= @article.title %></h1>
+    <p><small class="pull-left">
+    	<%= @article.author %>
+       </small>
+       <small class="pull-right">
+       	<%= @article.date %>
+       </small>
+    </p>
+    </div>
+    <div class="row-fluid">
+    <div id="heatmapArea" class="well pull-left" style="width:610px;padding:0;height:400px;cursor:pointer;position:relative;margin:20px;"></div>
+      <p><%= @article.content.gsub(/^(.*)$/, '<p>\1</p>').html_safe%></p>
+    </div>
+  </div>
+  <div class="span3">
+    <!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch influence map</a>-->
+    <div id="Lat"></div>
+    <div id="Long"></div>
+    <div>
+      <h1>People here </h1>
+      <ul>
+      <% @article.articletags.each do |tag| %>
+        <% person=Tag.find(tag.tag_id) %>
+        <% if person.typetext="person" %>
+         <li><%= person.tagtext %>&nbsp;&nbsp;&nbsp;Mentioned <%= tag.weight %> times</li>
+        <% end %>
+      <% end %>
+  </div>
+
+
+    
+
+    
+
+
+</div>
+
+<script type="text/javascript">
+(function() {
+  $(function() {
+    var Geo, error, populateHeader, success;
+    success = function(position) {
+      Geo.lat = position.coords.latitude;
+      Geo.lng = position.coords.longitude;
+      return populateHeader(Geo.lat, Geo.lng);
+    };
+    error = function() {
+      return console.log("Geocoder failed");
+    };
+    populateHeader = function(lat, lng) {
+      setTimeout(function() {
+       $.ajax({ url: '<%= "/articles/#{@article.id}/record_visit?"%>' +"lat="+lat +"&long="+ lng});},25000);
+    };
+    Geo = {};
+    if (navigator.geolocation) {
+      return navigator.geolocation.getCurrentPosition(success, error);
+    }
+  });
+
+}).call(this);
+
+
+</script>

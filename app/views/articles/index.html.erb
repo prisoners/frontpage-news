@@ -12,12 +12,20 @@
   
   <% @articles.each_with_index do |article,i| %>
     <div class='<%="span#{spans(i)}"%>'>
-      <h1 style='<%= "font-size:#{if i==0 then "3" else "2" end}em;"%>'><%= link_to @articles[i].title , article %><small><%= article.score(@lat,@long) %></small></h1>
+      <h1 style='<%= "font-size:#{if i==0 then "3" else "2" end}em;"%>'><%= link_to @articles[i].title , article %><small class="pull-right"><%= (article.score(@lat,@long)+0.5).to_i %></small></h1>
       <% n = spans(i) * 10 %>
       <p><%= RedCloth.new(@articles[0].content.split[0..n].join(' ')).to_html.html_safe%></p>
       <p><%= link_to "Learn more",article %> </a></p>
     </div>
   <% end %>
+</div>
+<div class="span2">
+<ul>
+  <li><a href="?lat=28.5&long=77.2">Delhi Edition</a></li>
+  <li><a href="?lat=13.5&long=80.2">Chennai Edition</a></li>
+  <li><a href="?lat=18.9&long=72.8">Mumbai Edition</a></li>
+  <li><a href="?lat=26.75&long=80.5">Kanpur Edition</a></li>
+</ul>
 </div>
 </div>
           

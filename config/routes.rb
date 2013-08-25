@@ -1,5 +1,6 @@
 FrontpageNews::Application.routes.draw do
 
+  
   match '/', to: 'static_pages#home', via: 'get'
   
   match '/help',    to: 'static_pages#help',     via: 'get'
@@ -14,6 +15,8 @@ FrontpageNews::Application.routes.draw do
   resources :articles do
     get :record_visit, :on => :member
   end
+
+  resources :people, only: [:index,:show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

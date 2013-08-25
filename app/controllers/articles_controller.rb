@@ -16,8 +16,11 @@ class ArticlesController < ApplicationController
   end
 
   def record_visit
-  	visitor=Visitor.new(article_id: params[:id],latitude:params[:lat],
-  		                longitude: params[:long],weight:1.0 )
-  	visitor.save
+  	@visitor=Visitor.new
+    @visitor.article_id =params[:id].to_i
+    @visitor.latitude = params[:lat]
+    @visitor.longitude= params[:long]
+    @visitor.weight =1.0
+    @visitor.save
   end
 end
